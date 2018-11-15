@@ -8,13 +8,15 @@ canonical: ""
 
 <main class="main">
 
-    <section class="section section--hero">
+    <section class="section section--hero" data-scroll-reveal-section data-navigation-text="">
         {{> hero }}
     </section>
 
-    <section class="section section--services">
-
+    <section class="section section--services" data-scroll-reveal-section data-navigation-text="What we do">
         {{> services }}
+    </section>
+
+    <section class="section section--services" data-scroll-reveal-section data-navigation-text="Work">
 
         {{> featured-work 
         image = "background-image: url('./assets/images/raster/featured-work-1.jpg')"
@@ -41,9 +43,10 @@ canonical: ""
 
     </section>
 
-    <section class="section section--about">
+    <section class="section section--about" data-scroll-reveal-section data-navigation-text="Made by Everyone">
         {{> about }}
     </section>
+
     
     {{> footer }}    
 </main>

@@ -1,23 +1,23 @@
 {{#if first}}
-<div class="featured-work__title-container">
+<div class="featured-work__title-container" data-scroll-reveal-container>
     <div class="container">
         <div class="row">
             <div class="col">
-                <p class="featured-work__title">Explore some of our proudest moments</p>
+                <p class="featured-work__title" data-scroll-reveal>Explore some of our proudest moments</p>
             </div>
         </div>
     </div>
 </div>
 {{/if}}
 
-<div class="featured-work__item">
+<div class="featured-work__item" data-scroll-reveal-container>
 
     <div class="container">
         <div class="row">
             <div class="col">
-                <div class="featured-work__details">
-                    <h3 class="featured__work-title">{{ title }}</h3>
-                    <p class="featured__work-customer">{{ customer }}</p>
+                <div class="featured-work__details" >
+                    <h3 class="featured__work-title" data-scroll-reveal>{{ title }}</h3>
+                    <p class="featured__work-customer" data-scroll-reveal>{{ customer }}</p>
                 </div>
             </div>
         </div>
@@ -34,11 +34,11 @@
 </div>
 
 {{#if last}}
-<div class="featured-work__view-more">
+<div class="featured-work__view-more" data-scroll-reveal-container>
     <div class="container">
         <div class="row">
             <div class="col">
-                <a class="featured-work__view-more-link" href="#">See more work</a>
+                <a class="featured-work__view-more-link" href="#" data-scroll-reveal>See more work</a>
             </div>
         </div>
     </div>
