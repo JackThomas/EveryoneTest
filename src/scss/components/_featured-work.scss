@@ -1,0 +1,130 @@
+// Featured Work Header
+// ---------
+
+.featured-work__title-container {
+	display: flex;
+	align-items: center;
+	height: 270px;
+    text-align: center;
+    background: colour(bg-white);
+}
+
+.featured-work__title {
+}
+
+// Featured Work Item 
+// ---------
+
+.featured-work__item {
+	display: flex;
+	align-items: center;
+	position: relative;
+
+	@include media-breakpoint-up(md) {
+		height: 100vh;
+		max-height: 785px;
+	}
+
+	&:hover {
+		.featured-work__image {
+			width: calc(100% - 140px);
+			height: calc(100% - 140px);
+		}
+
+		.featured-work__image-link-wrapper {
+			transition: transform 0.4s ease-in-out, opacity 0.4s 0.2s ease-in-out;
+			transform: translateX(0px);
+			opacity: 1;
+		}
+	}
+}
+
+.featured-work__details {
+	position: relative;
+	z-index: 3;
+	text-align: center;
+	color: colour(text-light);
+}
+
+.featured__work-title {
+	margin: 0;
+
+	@include media-breakpoint-up(md) {
+		font-size: 3rem;
+	}
+}
+
+.featured__work-customer {
+	margin: 0;
+
+	@include media-breakpoint-up(md) {
+		font-size: 1.5rem;
+	}
+}
+
+.featured-work__image-wrapper {
+	overflow: hidden;
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.featured-work__image {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+	background-position: center;
+	background-size: cover;
+}
+
+.featured-work__image-link-wrapper {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	z-index: 10;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 70px;
+	height: 100%;
+	margin: auto;
+	transition: transform 0.3s 0.1s ease-in-out, opacity 0.3s ease-in-out;
+	transform: translateX(-30px);
+	opacity: 0;
+}
+
+.featured-work__image-link {
+	position: absolute;
+	right: 0;
+	height: 55px;
+	transform: rotate(90deg);
+	white-space: pre;
+}
+
+
+// Featured Work Footer
+// ---------
+
+.featured-work__view-more {
+	display: flex;
+	align-items: center;
+	height: 130px;
+	margin-top: 70px;
+	text-align: center;
+}
+
+.featured-work__view-more-link {
+}

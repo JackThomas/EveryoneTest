@@ -1,0 +1,46 @@
+{{#if first}}
+<div class="featured-work__title-container">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p class="featured-work__title">Explore some of our proudest moments</p>
+            </div>
+        </div>
+    </div>
+</div>
+{{/if}}
+
+<div class="featured-work__item">
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="featured-work__details">
+                    <h3 class="featured__work-title">{{ title }}</h3>
+                    <p class="featured__work-customer">{{ customer }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="featured-work__image-wrapper">
+        <div class="featured-work__image" style="{{{ image }}}"></div>
+        <div class="featured-work__image-link-wrapper">
+            <a class="featured-work__image-link" href="#">View Project</a>
+        </div>
+    </div>
+
+    <a href="{{ link }}" class="featured-work__link"></a>
+</div>
+
+{{#if last}}
+<div class="featured-work__view-more">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <a class="featured-work__view-more-link" href="#">See more work</a>
+            </div>
+        </div>
+    </div>
+</div>
+{{/if}}

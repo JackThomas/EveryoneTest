@@ -1,0 +1,226 @@
+.navigation {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	position: fixed;
+	z-index: 20;
+	top: 0;
+	left: 0;
+	width: 70px;
+	height: 100vh;
+	padding: 20px 10px;
+	transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+	border-right: 1px solid colour(bg-default);
+	background-color: colour(bg-nav);
+
+	&.active {
+		border-color: rgba(colour(bg-default), 0);
+		background-color: rgba(colour(bg-nav), 0);
+	}
+}
+
+.nav__logo-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.nav__logo {
+	width: 48px;
+	height: 48px;
+}
+
+.nav__section-title-wrapper {
+}
+
+.nav__section-title {
+}
+
+.nav__toggle-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.nav__toggle {
+	display: block;
+	position: relative;
+	width: 30px;
+	height: 15px;
+
+	&:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 30px;
+		height: 3px;
+		content: '';
+		transition: top 0.2s 0.2s ease-in-out, transform 0.2s 0.15s ease-in-out;
+		background: colour(text-dark);
+	}
+
+	&:after {
+		position: absolute;
+		top: 12px;
+		left: 0;
+		width: 30px;
+		height: 3px;
+		content: '';
+		transition: top 0.2s 0.2s ease-in-out, transform 0.2s 0.15s ease-in-out;
+		background: colour(text-dark);
+	}
+
+	span {
+		display: none;
+	}
+
+	&.active {
+		&:before {
+			top: 7px;
+			margin: auto;
+			transition: top 0.2s ease-in-out, transform 0.2s 0.15s ease-in-out;
+			transform: rotate(45deg);
+		}
+		
+		&:after {
+			top: 7px;
+			margin: auto;
+			transition: top 0.2s ease-in-out, transform 0.2s 0.15s ease-in-out;
+			transform: rotate(-45deg);
+		}
+	}
+}
+
+body.fixed {
+	overflow: hidden;
+}
+
+.navigation-dropdown {
+	display: flex;
+	overflow: hidden;
+	flex-direction: column;
+	position: fixed;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	width: 70px;
+	height: 100vh;
+	transition: width 0.3s cubic-bezier(0.65,0,0.33,1), background-color 0.3s ease-in-out, z-index 0.3s step-end;
+	will-change: opacity, width;
+	background: rgba(colour(bg-dropdown-nav), 0);
+
+	&.active {
+		overflow: scroll;
+		z-index: 10;
+		width: 100vw;
+		padding: 70px 70px 70px 140px;
+		transition: width 0.3s cubic-bezier(0.65,0,0.33,1), opacity 0.3s ease-in-out, z-index 0.3s step-start;
+		background: rgba(colour(bg-dropdown-nav), 1);
+
+		.dropdown__nav-list .dropdown__nav-list-item {
+			transition: opacity 0.3s cubic-bezier(0.65,0,0.33,1);
+			opacity: 1;
+
+			@for $i from 1 through 30 {
+				&:nth-of-type(#{$i}) {
+					transition-delay: #{($i * 150) + 150 }ms;
+				}
+			}
+		}
+
+		.dropdown__social-nav-item {
+			transition: opacity 0.3s cubic-bezier(0.65,0,0.33,1), transform 0.3s cubic-bezier(0.65,0,0.33,1);
+			transform: translateY(0);
+			opacity: 1;
+
+			@for $i from 1 through 30 {
+				&:nth-of-type(#{$i}) {
+					transition-delay: #{$i * 100 + 700}ms;
+				}
+			}
+		}
+		.dropdown__logo-wrapper {
+			transition: opacity 0.3s cubic-bezier(0.65,0,0.33,1), transform 0.3s cubic-bezier(0.65,0,0.33,1);
+			transition-delay: 1200ms;
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+}
+
+.dropdown__nav-wrapper {
+	display: flex;
+	flex-grow: 1;
+	align-items: center;
+}
+
+.dropdown__nav {
+}
+
+.dropdown__nav-list {
+	display: flex;
+	max-width: 850px;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+
+	flex-wrap: wrap;
+}
+
+.dropdown__nav-list-item {
+	transition: opacity 0.1s cubic-bezier(0.65,0,0.33,1);
+	opacity: 0;
+
+	&:after {
+		font-size: 3rem;
+		margin-right: 5px;
+		margin-left: 5px;
+		content: '/';
+	}
+
+	&:last-of-type {
+		&:after {
+			content: initial;
+		}
+	}
+}
+
+.dropdown__nav-list-link {
+	font-size: 3rem;
+}
+
+.dropdown__footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.dropdown__social-nav {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.dropdown__social-nav-item {
+	margin-right: 25px;
+	transform: translateY(20px);
+	opacity: 0;
+
+	&:last-of-type {
+		margin-right: 0;
+	}
+}
+
+.dropdown__social-link {
+}
+
+.dropdown__logo-wrapper {
+	display: flex;
+	justify-content: flex-end;
+	transform: translateY(20px);
+	opacity: 0;
+}
+
+.dropdown__logo {
+	width: 238px;
+	height: 44px;
+}

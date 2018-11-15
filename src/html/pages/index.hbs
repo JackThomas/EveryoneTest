@@ -1,0 +1,49 @@
+---
+layout: default.hbs
+script: ./assets/js/site.js
+stylesheet: ./assets/css/site.css
+title: "Jack Thomas - Web Developer"
+canonical: ""
+---
+
+<main class="main">
+
+    <section class="section section--hero">
+        {{> hero }}
+    </section>
+
+    <section class="section section--services">
+
+        {{> services }}
+
+        {{> featured-work 
+        image = "background-image: url('./assets/images/raster/featured-work-1.jpg')"
+        title = "Serviced apartments done distinctively"
+        customer = "Lateral City Apartments"
+        link = "#"
+        first = true
+        }}
+
+        {{> featured-work
+        image = "background-image: url('./assets/images/raster/featured-work-2.jpg')"
+        title = "Supporting makers & promoting craft"
+        customer = "Craft Scotland"
+        link = "#"
+        }}
+
+        {{> featured-work
+        image = "background-image: url('./assets/images/raster/featured-work-3.jpg')"
+        title = "Exemplary Horse racing since 1816"
+        customer = "Musselburgh Racecourse"
+        link = "#"
+        last = true
+        }}
+
+    </section>
+
+    <section class="section section--about">
+        {{> about }}
+    </section>
+    
+    {{> footer }}    
+</main>

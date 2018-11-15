@@ -1,0 +1,24 @@
+.services {
+	display: flex;
+	align-items: center;
+
+	@include media-breakpoint-up(md) {
+		height: 100vh;
+		min-height: 785px;
+	}
+}
+
+.services__content {
+	text-align: center;
+}
+
+.services__title {
+}
+
+.services__link {
+	color: colour(link-grey);
+
+	&:hover {
+		color: darken(colour(link-grey), 20%);
+	}
+}

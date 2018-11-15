@@ -1,0 +1,34 @@
+
+// Colour Values
+// ---------
+
+@function colour($name, $opacity: 1) {
+    @if map-has-key($colour-palette, $name) {
+        $color: map-get($colour-palette, $name);
+        @return rgba($color, $opacity);
+    }
+    @else {
+        @error "Colour value `#{$name}` is not currently defined.";
+    }
+}
+
+
+// REM Calculation
+// ---------
+
+@function rem($size) {
+    @return #{ ($size / $root-font-size) }rem;
+}
+
+
+// Font Weights
+// ---------
+
+@function font-weight($name) {
+    @if map-has-key($font-weights, $name) {
+        @return map-get($font-weights, $name);
+    }
+    @else {
+        @error "Font-Weight value `#{$name}` is not currently defined.";
+    }
+}

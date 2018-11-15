@@ -1,0 +1,71 @@
+html,
+body {
+	font-family: $body-font;
+	font-size: $root-font-size * 1px;
+	color: colour(text-dark);
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $header-font;
+	font-weight: font-weight(regular);
+	line-height: 1.25;
+	margin-top: 0;
+	letter-spacing: 0.03em;
+}
+
+h1 {
+	font-size: 1.75rem;
+
+	@include media-breakpoint-up(md) {
+		font-size: 3rem;
+	}
+}
+
+h2 {
+	@include media-breakpoint-up(md) {
+		font-size: 2rem;
+	}
+}
+
+p {
+	font-family: $body-font;
+	font-size: 1rem;
+	font-weight: font-weight(regular);
+}
+
+a {
+	font-size: 1rem;
+	font-weight: font-weight(regular);
+	transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+	text-decoration: none;
+	color: colour(text-dark);
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		color: rgba(colour(text-dark), 0.6);
+	}
+}
+
+ul,
+ol {
+	padding-left: 25px;
+
+	li {
+		font-size: 16px;
+		font-weight: font-weight(light);
+		letter-spacing: 0.03em;
+
+		@include media-breakpoint-up(md) {
+			font-size: 18px;
+		}
+	}
+}

@@ -1,0 +1,41 @@
+.hero {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	background-position: center;
+	background-size: cover;
+
+	@include media-breakpoint-up(md) {
+		min-height: 100vh;
+	}
+}
+
+.hero__content-container {
+}
+
+.hero__content {
+	text-align: center;
+	color: colour(text-light);
+}
+
+.hero__title {
+	line-height: 1.1;
+	margin-bottom: 0;
+}
+
+.hero__subtitle {
+	margin-top: 1rem;
+	margin-bottom: 0;
+}
+
+.hero__logo-wrapper {
+	position: absolute;
+	right: 70px;
+	bottom: 60px;
+}
+
+.hero__logo {
+	width: 238px;
+	height: 44px;
+}

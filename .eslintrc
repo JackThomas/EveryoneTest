@@ -1,0 +1,80 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "worker": true,
+        "serviceworker": true,
+        "jquery": true,
+        "mocha": true,
+        "mongo": true
+    },
+    "parserOptions": {
+        "sourceType": "module"
+    },
+    "rules": {
+
+        //  Error avoidance
+        "getter-return": 2,
+        "no-console": 2,
+        "no-dupe-args": "error",
+        "no-dupe-keys": "error",
+        "no-empty": "error",
+        "no-extra-boolean-cast": "error",
+        // "no-extra-parens": "warn",
+        "no-extra-semi": "error",
+        "no-invalid-regexp": "error",
+        "no-regex-spaces": "error",
+        "no-unreachable": "error",
+        "no-unsafe-finally": "error",
+        "use-isnan": "error",
+        "valid-typeof": "error",
+
+        //  Best practice
+        "accessor-pairs": "error",
+        // "complexity": 50,
+        "consistent-return": "warn",
+        "curly": "error",
+        "eqeqeq": "error",
+        "guard-for-in": "error",
+        "no-alert": "error",
+        "no-empty-function": "error",
+        "no-empty-pattern": "error",
+        "no-eval": "error",
+        "no-implicit-coercion": "error",
+        "no-implicit-globals": "error",
+        "no-implied-eval": "error",
+        "no-invalid-this": "warn",
+        "no-iterator": "error",
+        "no-labels": "error",
+        "no-lone-blocks": "error",
+        "no-loop-func": "error",
+        "no-new-wrappers": "error",
+        "no-octal": "error",
+        "no-octal-escape": "error",
+        "no-proto": "error",
+        "no-script-url": "error",
+        "no-sequences": "error",
+        "no-unmodified-loop-condition": "error",
+        "no-unused-expressions": "error",
+        "no-useless-return": "error",
+        "no-void": "error",
+        "vars-on-top": "error",
+        "wrap-iife": "error",
+        "yoda": "error",
+
+        //  Variables
+        "no-delete-var": "error",
+        "no-unused-vars": "error",
+        "no-use-before-define": "warn",
+
+        //  Stylistic
+        "semi": "error",
+
+        //  ES6
+        "arrow-body-style": "error",
+        "arrow-parens": "error",
+        "no-const-assign": "error",
+        "prefer-const": "error"
+
+    }
+}

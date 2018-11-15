@@ -1,0 +1,83 @@
+{
+  "name": "EveryoneTest",
+  "description": "",
+  "version": "1.0.0",
+  "homepage": "",
+  "author": {
+    "name": "Jack Thomas",
+    "email": "jack@jackt.me"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "license": {
+    "type": "",
+    "url": ""
+  },
+  "scripts": {
+    "dev": "gulp dev",
+    "build": "gulp",
+    "prod": "gulp clean && gulp --prod",
+    "clean": "gulp clean",
+    "watch": "gulp watch"
+  },
+  "devDependencies": {
+    "assemble": "0.24.3",
+    "autoprefixer": "7.1.6",
+    "babel": "6.23.0",
+    "babel-cli": "6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "6.26.0",
+    "babelify": "8.0.0",
+    "browser-sync": "2.18.13",
+    "browserify": "14.5.0",
+    "chai": "4.1.2",
+    "connect": "3.6.5",
+    "css-mqpacker": "6.0.1",
+    "del": "3.0.0",
+    "eslint": "4.11.0",
+    "gulp": "3.9.1",
+    "gulp-babel": "7.0.0",
+    "gulp-buffer": "0.0.2",
+    "gulp-cli": "1.4.0",
+    "gulp-concat": "2.6.1",
+    "gulp-csso": "3.0.0",
+    "gulp-header": "^2.0.5",
+    "gulp-imagemin": "3.4.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-newer": "1.3.0",
+    "gulp-postcss": "7.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "3.1.0",
+    "gulp-sass-glob": "1.0.8",
+    "gulp-sourcemaps": "2.6.1",
+    "gulp-svgmin": "1.2.4",
+    "gulp-svgstore": "6.1.0",
+    "gulp-uglify": "3.0.0",
+    "gulp-util": "3.0.8",
+    "merge-stream": "1.0.1",
+    "morgan": "1.9.0",
+    "ncp": "2.0.0",
+    "opn": "5.1.0",
+    "postcss-svg-fragments": "1.3.2",
+    "require-dir": "0.3.2",
+    "sass-module-importer": "1.4.0",
+    "serve-static": "1.13.1",
+    "sinon": "4.1.1",
+    "through2": "2.0.3",
+    "vinyl-buffer": "1.0.0",
+    "vinyl-source-stream": "1.1.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "scroll-window-to-element": "^1.0.5",
+    "scrollreveal": "4.0.2"
+  }
+}

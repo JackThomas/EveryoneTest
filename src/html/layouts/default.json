@@ -1,0 +1,17 @@
+{
+	"prefetch": "",
+	"author": "Everyone - Test",
+	"keywords": "",
+	"description": "",
+	"image": "",
+	"sitename": "",
+	"sitetype": "",
+	"locale": "en-GB",
+	"alternate_locale": "en-US",
+	"language": "en",
+	"copyright_url": "",
+	"contact_url": "",
+	"icon": "./assets/images/raster/favicon",
+	"icon_apple": "/icon-apple-favourite.png",
+	"icon_apple_startup": "/icon-apple-webapp.png"
+}

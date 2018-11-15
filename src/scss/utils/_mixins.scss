@@ -1,0 +1,19 @@
+// Horizontal Gradient Mixin
+// ---------
+
+@mixin horizontal-gradient($from, $to, $stop: 100%) {
+	/* Fallback */
+	background-color: $from;
+	/* Standard */
+	background:     linear-gradient(to right, $from 0%, $to $stop);
+}
+
+// Vertical Gradient Mixin
+// ---------
+
+@mixin vertical-gradient($from, $to, $stop: 100%) {
+	/* Fallback */
+	background-color: $from;
+	/* Standard */
+	background:     linear-gradient(to bottom, $from 0%, $to $stop);
+}
