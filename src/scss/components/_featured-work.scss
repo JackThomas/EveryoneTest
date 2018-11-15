@@ -4,9 +4,13 @@
 .featured-work__title-container {
 	display: flex;
 	align-items: center;
-	height: 270px;
-    text-align: center;
-    background: colour(bg-white);
+	height: 200px;
+	text-align: center;
+	background: colour(bg-white);
+
+	@include media-breakpoint-up(md) {
+		height: 270px;
+	}
 }
 
 .featured-work__title {
@@ -19,6 +23,10 @@
 	display: flex;
 	align-items: center;
 	position: relative;
+	height: 70vh;
+	min-height: 500px;
+	padding: 0 70px;
+	background: colour(bg-white);
 
 	@include media-breakpoint-up(md) {
 		height: 100vh;
@@ -27,15 +35,29 @@
 
 	&:hover {
 		.featured-work__image {
-			width: calc(100% - 140px);
-			height: calc(100% - 140px);
+
+			@include media-breakpoint-up(md) {
+				width: calc(100% - 140px);
+				height: calc(100% - 140px);
+			}
 		}
 
 		.featured-work__image-link-wrapper {
-			transition: transform 0.4s ease-in-out, opacity 0.4s 0.2s ease-in-out;
+			transition: transform 0.3s 0.2s ease-in-out, opacity 0.3s 0.2s ease-in-out;
 			transform: translateX(0px);
 			opacity: 1;
 		}
+
+		.featured-work__link {
+			@include media-breakpoint-up(md) {
+				width: calc(100% - 140px);
+				height: calc(100% - 140px);
+			}
+		}
+	}
+
+	.container {
+		padding: 0;
 	}
 }
 
@@ -47,6 +69,7 @@
 }
 
 .featured__work-title {
+	font-size: 2rem;
 	margin: 0;
 
 	@include media-breakpoint-up(md) {
@@ -55,6 +78,7 @@
 }
 
 .featured__work-customer {
+	font-size: 1rem;
 	margin: 0;
 
 	@include media-breakpoint-up(md) {
@@ -93,7 +117,6 @@
 	display: flex;
 	align-items: center;
 	position: absolute;
-	z-index: 10;
 	z-index: 1;
 	top: 0;
 	right: 0;
@@ -114,6 +137,17 @@
 	white-space: pre;
 }
 
+.featured-work__link {
+	position: absolute;
+	z-index: 4;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+}
 
 // Featured Work Footer
 // ---------
@@ -121,10 +155,20 @@
 .featured-work__view-more {
 	display: flex;
 	align-items: center;
-	height: 130px;
+	height: 70px;
 	margin-top: 70px;
 	text-align: center;
+
+	@include media-breakpoint-up(md) {
+		height: 130px;
+	}
 }
 
 .featured-work__view-more-link {
+	display: block;
+	color: colour(link-grey);
+
+	&:hover {
+		color: darken(colour(link-grey), 20%);
+	}
 }

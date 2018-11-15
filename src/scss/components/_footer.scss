@@ -1,6 +1,9 @@
 .footer {
-	padding-top: 70px;
-	padding-bottom: 100px;
+	padding: 70px 20px;
+
+	@include media-breakpoint-up(md) {
+		padding: 70px 0;
+	}
 }
 
 .footer__address {
@@ -40,10 +43,21 @@
 
 .footer__logo-wrapper {
 	display: flex;
-	justify-content: flex-end;
+	justify-content: center;
+	margin-top: 60px;
+
+	@include media-breakpoint-up(md) {
+		justify-content: flex-end;
+		margin-top: 0;
+	}
 }
 
 .footer__logo {
-	width: 238px;
-	height: 44px;
+	width: 144px;
+	height: 27px;
+
+	@include media-breakpoint-up(md) {
+		width: 238px;
+		height: 44px;
+	}
 }

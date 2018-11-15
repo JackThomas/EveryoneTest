@@ -1,10 +1,12 @@
 .services {
 	display: flex;
 	align-items: center;
-
+    padding: 150px 0;
+    
 	@include media-breakpoint-up(md) {
-		height: 100vh;
-		min-height: 785px;
+        padding: 0; 
+        max-height: 785px;
+        height: 100vh;
 	}
 }
 
@@ -16,6 +18,7 @@
 }
 
 .services__link {
+	display: block;
 	color: colour(link-grey);
 
 	&:hover {

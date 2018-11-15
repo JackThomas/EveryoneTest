@@ -2,7 +2,11 @@
 	margin-top: 70px;
 }
 
+.about__image-wrapper {
+}
+
 .about__image {
+	display: block;
 	width: 100%;
 }
 
@@ -12,7 +16,12 @@
 	justify-content: center;
 	align-items: center;
 	height: 400px;
+	padding: 0 20px;
 	text-align: center;
+
+	@include media-breakpoint-up(md) {
+		padding: 0;
+	}
 }
 
 .about__cta-title {
@@ -20,4 +29,10 @@
 }
 
 .about__cta-link {
+	display: block;
+	color: colour(link-grey);
+
+	&:hover {
+		color: darken(colour(link-grey), 20%);
+	}
 }

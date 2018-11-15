@@ -3,6 +3,7 @@
 	justify-content: center;
 	align-items: center;
 	width: 100%;
+	min-height: 100vh;
 	background-position: center;
 	background-size: cover;
 
@@ -31,11 +32,23 @@
 
 .hero__logo-wrapper {
 	position: absolute;
-	right: 70px;
+	right: 0;
 	bottom: 60px;
+	left: 0;
+	width: 144px;
+	height: 27px;
+	margin: auto;
+
+	@include media-breakpoint-up(md) {
+		right: 70px;
+		bottom: 60px;
+		left: initial;
+		width: 238px;
+		height: 44px;
+		margin: 0;
+	}
 }
 
 .hero__logo {
-	width: 238px;
-	height: 44px;
+	width: 100%;
 }
